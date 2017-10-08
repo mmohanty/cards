@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build completed on 'date'
       - mvn package
-      - aws s3 cp /src/main/resources/template/apiTemplate.json s3://artifact-manas/APITemplate.json
+      - aws s3 cp ./src/main/resources/template/apiTemplate.json s3://artifact-manas/APITemplate.json
 artifacts:
   type: zip
   files:
