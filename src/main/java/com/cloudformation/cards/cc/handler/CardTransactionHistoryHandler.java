@@ -24,7 +24,7 @@ public class CardTransactionHistoryHandler implements RequestHandler<Transaction
 		final String tableName = "CardTransaction";
 		final AmazonDynamoDB dynamoDB = AmazonDynamoDBClientBuilder.standard().withClientConfiguration(clientConfig).withRegion(Regions.AP_SOUTHEAST_1).build();
 		
-		 // Scan items for transactions with a card-number ranging between start date and end date.
+		 // Scan items for transactions with a card-number and transaction date ranging between given start and end date.
         HashMap<String, Condition> scanFilter = new HashMap<String, Condition>();
         Condition cardNumberCondition = new Condition()
             .withComparisonOperator(ComparisonOperator.EQ.toString())
