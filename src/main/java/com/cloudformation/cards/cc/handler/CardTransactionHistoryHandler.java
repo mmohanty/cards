@@ -20,8 +20,6 @@ public class CardTransactionHistoryHandler implements RequestHandler<Transaction
 	public String handleRequest(TransactionHistory input, Context context) {
 		
 		final ClientConfiguration clientConfig = new ClientConfiguration();
-		//clientConfig.setProxyHost("10.5.1.26");
-		//clientConfig.setProxyPort(8080);
 
 		final String tableName = "CardTransaction";
 		final AmazonDynamoDB dynamoDB = AmazonDynamoDBClientBuilder.standard().withClientConfiguration(clientConfig).withRegion(Regions.AP_SOUTHEAST_1).build();
