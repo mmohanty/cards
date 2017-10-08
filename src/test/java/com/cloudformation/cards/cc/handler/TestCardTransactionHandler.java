@@ -24,7 +24,7 @@ public class TestCardTransactionHandler {
 		historyInput.setStartDate("01-01-2000");
 		historyInput.setEndDate("31-12-2020");
 		
-		String data = cardTransactionHandler.handleRequest(historyInput, null);
+		//String data = cardTransactionHandler.handleRequest(historyInput, null);
 		
 		//Assert.assertNotNull("Data can not be null.", data);
 	}
