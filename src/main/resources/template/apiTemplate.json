@@ -64,13 +64,16 @@
    },
     "Resources": {
       "CardTransactionHistoryFn": {
-        "Type": "AWS::Serverless::Function",
+        "Type": "AWS::Lambda::Function",
         "Properties": {
-          "Handler": "CardTransactionHistory.handler",
+          "Handler": "com.cloudformation.cards.cc.handler.CardTransactionHistoryHandler",
           "Role": { "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]},
           "FunctionName": { "Fn::Join": [ "-", [ { "Ref": "AWS::StackName" }, { "Ref": "APIName" } ] ] },
-          "CodeUri": "./../handler",
-          "Runtime": "nodejs6.10"
+          "Code": {
+              "S3Bucket": "artifact-manas",
+              "S3Key": "cards-1.0-SNAPSHOT.jar"
+            },
+          "Runtime": "java8"
         }
       },
       "LambdaExecutionRole": {
