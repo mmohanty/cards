@@ -71,7 +71,7 @@
           "FunctionName": { "Fn::Join": [ "-", [ { "Ref": "AWS::StackName" }, { "Ref": "APIName" } ] ] },
           "Code": {
               "S3Bucket": "artifact-manas",
-              "S3Key": "AWSJavaAutomation/target/cards-1.0-SNAPSHOT.jar"
+              "S3Key": "AWSJavaAutomation/target/cards-0.0.1-SNAPSHOT.jar"
             },
           "Runtime": "java8"
         }
