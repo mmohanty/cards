@@ -17,4 +17,4 @@ artifacts:
   type: zip
   files:
     - APITemplate.json
-    - target/cards-0.0.1-SNAPSHOT.jar
+    - target/cards-0.0.1-SNAPSHOT-jar-with-dependencies.jar
