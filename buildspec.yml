@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build completed on 'date'
       - mvn package
-      - aws cloudformation package --template-file ./src/main/resources/template/APITemplate.json --s3-bucket artifact-manas
+      - aws cloudformation package --template-file ./src/main/resources/template/APITemplate.json --s3-bucket artifact-demo-2
                                    --output-template-file APITemplate.json
 artifacts:
   type: zip

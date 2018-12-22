@@ -70,7 +70,7 @@
           "Role": { "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]},
           "FunctionName": { "Fn::Join": [ "-", [ { "Ref": "AWS::StackName" }, { "Ref": "APIName" } ] ] },
           "Code": {
-              "S3Bucket": "artifact-manas",
+              "S3Bucket": "artifact-demo-2",
               "S3Key": "AWSJavaAutomation/target/cards-0.0.1-SNAPSHOT-jar-with-dependencies.jar"
             },
           "Runtime": "java8"
