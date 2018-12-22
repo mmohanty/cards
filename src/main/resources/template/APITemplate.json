@@ -157,12 +157,6 @@
                  ]]}
                }
             },
-           "RequestParameters": {
-              "method.request.querystring.cardNumber": true,
-              "method.request.querystring.startDate": true,
-              "method.request.querystring.endDate": true
-
-           },
            "MethodResponses": [{
               "StatusCode": 200
             }]
